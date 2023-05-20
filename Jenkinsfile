@@ -24,6 +24,11 @@ pipeline {
                 sh './teste-app.sh'
             }  
         }  
+        stage('shut down docker-compose'){
+            steps{
+                sh 'docker-compose down'
+            }  
+        }         
 
     }
 }
